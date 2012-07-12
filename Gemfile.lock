@@ -81,7 +81,7 @@ GEM
       activesupport
       builder
     annotate (2.4.0)
-    arbre (1.0.0.rc4)
+    arbre (1.0.0)
       activesupport (>= 3.0.0)
     archive-tar-minitar (0.5.2)
     arel (3.0.2)
@@ -185,6 +185,11 @@ GEM
       supermodel
       vimeo
     hashie (1.2.0)
+    heroku (2.24.1)
+      launchy (>= 0.3.2)
+      netrc (~> 0.7.1)
+      rest-client (~> 1.6.1)
+      rubyzip
     hike (1.2.1)
     http_accept_language (1.0.2)
     httparty (0.6.1)
@@ -243,6 +248,7 @@ GEM
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-ssh (2.5.2)
+    netrc (0.7.5)
     nokogiri (1.4.7)
     oauth (0.4.6)
     oauth2 (0.8.0)
@@ -469,6 +475,7 @@ DEPENDENCIES
   foreigner
   formtastic
   has_vimeo_video (>= 0.0.4)
+  heroku (~> 2.24.0)
   http_accept_language
   httparty (~> 0.6.1)
   httpclient (= 2.2.5)
@@ -486,6 +493,7 @@ DEPENDENCIES
   omniauth-facebook (~> 1.2.0)
   omniauth-github (~> 1.0.1)
   omniauth-linkedin (~> 0.0.6)
+  omniauth-oauth2 (~> 1.0.0)
   omniauth-openid (~> 1.0.1)
   omniauth-twitter (~> 0.0.12)
   omniauth-yahoo (~> 0.0.4)

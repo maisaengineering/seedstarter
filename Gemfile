@@ -6,6 +6,7 @@ gem 'rake', '0.9.2.2'
 
 # Database [Putting pg to the end because of a weird bug with Lion, pg and openssl]
 gem 'pg'
+gem "heroku", "~> 2.24.0"
 gem 'foreigner'
 gem 'activerecord-postgresql-adapter'
 
@@ -24,7 +25,8 @@ gem 'omniauth-linkedin', '~> 0.0.6'
 gem 'omniauth-yahoo', '~> 0.0.4'
 gem 'devise', '1.5.3'
 gem 'cancan'
-
+gem 'omniauth-oauth2', '~> 1.0.0'
+ 
 gem 'rails_autolink', '~> 1.0.7'
 
 # Tools
