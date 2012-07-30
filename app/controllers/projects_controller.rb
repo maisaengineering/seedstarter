@@ -105,7 +105,7 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def create
+  def create    
     params[:project][:expires_at] += (23.hours + 59.minutes + 59.seconds) if params[:project][:expires_at]
     validate_rewards_attributes if params[:project][:rewards_attributes].present?
     create!(:notice => t('projects.create.success'))
