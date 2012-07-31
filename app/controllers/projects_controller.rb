@@ -67,34 +67,34 @@ class ProjectsController < ApplicationController
   end
 
   def send_mail
-    current_user.update_attribute :email, params[:contact] if current_user.email.nil?
-    ProjectsMailer.start_project_email(
-      params[:how_much_you_need],
-      params[:category],
-      params[:about],
-      params[:rewards],
-      params[:video],
-      params[:facebook],
-      params[:twitter],
-      params[:blog],
-      params[:links],
-      params[:know_us_via],
-      params[:contact],
-      current_user,
-      "#{I18n.t('site.base_url')}#{user_path(current_user)}").deliver
+    #current_user.update_attribute :email, params[:contact] if current_user.email.nil?
+    #ProjectsMailer.start_project_email(
+    #  params[:how_much_you_need],
+    #  params[:category],
+    #  params[:about],
+    #  params[:rewards],
+    #  params[:video],
+    #  params[:facebook],
+    #  params[:twitter],
+    #  params[:blog],
+    #  params[:links],
+    #  params[:know_us_via],
+    #  params[:contact],
+    #  current_user,
+    #  "#{I18n.t('site.base_url')}#{user_path(current_user)}").deliver
 
-    # Send project receipt
-    notification_text = I18n.t('project.start.notification_text', :locale => current_user.locale)
-    email_subject = I18n.t('project.start.email_subject', :locale => current_user.locale)
-    email_text = I18n.t('project.start.email_text', 
-                        :facebook => I18n.t('site.facebook', :locale => current_user.locale), 
-                        :blog => I18n.t('site.blog', :locale => current_user.locale), 
-                        :explore_link => explore_url, 
-                        :email => (I18n.t('site.email.contact', :locale => current_user.locale)), 
-                        :locale => current_user.locale)
-    Notification.create :user => current_user, :text => notification_text, :email_subject => email_subject, :email_text => email_text
-    flash[:success] = t('projects.send_mail.success')
-    redirect_to :root
+    ### Send project receipt
+    #notification_text = I18n.t('project.start.notification_text', :locale => current_user.locale)
+    #email_subject = I18n.t('project.start.email_subject', :locale => current_user.locale)
+    #email_text = I18n.t('project.start.email_text', 
+    #                    :facebook => I18n.t('site.facebook', :locale => current_user.locale), 
+    #                    :blog => I18n.t('site.blog', :locale => current_user.locale), 
+    #                    :explore_link => explore_url, 
+    #                    :email => (I18n.t('site.email.contact', :locale => current_user.locale)), 
+    #                    :locale => current_user.locale)
+    #Notification.create :user => current_user, :text => notification_text, :email_subject => email_subject, :email_text => email_text
+    #flash[:success] = t('projects.send_mail.success')
+    #redirect_to :root
   end
 
   def new
