@@ -3,7 +3,7 @@ begin
     ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
     :port           => '587',
-    :authentication => :plain,
+    :authentication => :login,
     :user_name      => 'catarse',
     :password       =>  Configuration[:sendgrid],
     :domain         => 'heroku.com'
