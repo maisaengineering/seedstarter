@@ -1,14 +1,14 @@
 begin
   if Rails.env.production?
-    config.action_mailer.smtp_settings = {
-      :enable_starttls_auto => true,
-      :address => "smtp.gmail.com",
-      :port => 587,
-      :domain => "gmail.com",
-      :authentication => :login,
-      :user_name => 'seedstarter.maisa@gmail.com',
-      :password => 'maisa1234',
+    ActionMailer::Base.smtp_settings = {
+    :address        => 'smtp.sendgrid.net',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => 'catarse',
+    :password       =>  Configuration[:sendgrid],
+    :domain         => 'heroku.com'
     }
+    ActionMailer::Base.delivery_method = :smtp
   end
 rescue
   nil
