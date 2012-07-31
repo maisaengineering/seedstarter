@@ -58,7 +58,7 @@ Catarse::Application.configure do
   config.active_support.deprecation = :notify
   config.active_record.schema_format = :sql
 
-  config.action_mailer.default_url_options = {:host => 'http://seedstarter.herokuapp.com' }
+  config.action_mailer.default_url_options = {:host => I18n.t("site.host") }
   
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
