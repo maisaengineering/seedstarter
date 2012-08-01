@@ -536,8 +536,8 @@ en:
     failure:
       error: "There was an error while loggin in. Please try again."
   site:
-    host: catarse.me
-    base_url: "http://catarse.me"
+    host: seedstarter.herokuapp.com
+    base_url: "http://seedstarter.herokuapp.com"
     blog: "http://blog.catarse.me/"
     email:
       contact: contato@catarse.me
@@ -545,8 +545,8 @@ en:
       projects: projetos@catarse.me
       system: system@catarse.me
     facebook: "http://www.facebook.com/Catarse.me"
-    name: Catarse
-    title: "The first crowdfunding platform from Brazil"
+    name: Seedstarter
+    title: "Testing title change"
     twitter: Catarse_
   static:
     faq:
